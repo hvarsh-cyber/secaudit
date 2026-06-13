@@ -1,0 +1,42 @@
+{
+    "target": "https://example.com",
+    "scan_time": "2026-06-13 19:47:41",
+    "total_vulnerabilities": 5,
+    "vulnerabilities": [
+        {
+            "type": "Missing Security Header",
+            "severity": "MEDIUM",
+            "header": "X-Frame-Options",
+            "description": "Prevents clickjacking attacks",
+            "recommendation": "Add X-Frame-Options header to all responses"
+        },
+        {
+            "type": "Missing Security Header",
+            "severity": "MEDIUM",
+            "header": "X-Content-Type-Options",
+            "description": "Prevents MIME sniffing",
+            "recommendation": "Add X-Content-Type-Options header to all responses"
+        },
+        {
+            "type": "Missing Security Header",
+            "severity": "MEDIUM",
+            "header": "Strict-Transport-Security",
+            "description": "Enforces HTTPS",
+            "recommendation": "Add Strict-Transport-Security header to all responses"
+        },
+        {
+            "type": "Missing Security Header",
+            "severity": "MEDIUM",
+            "header": "Content-Security-Policy",
+            "description": "Prevents XSS attacks",
+            "recommendation": "Add Content-Security-Policy header to all responses"
+        },
+        {
+            "type": "Missing Security Header",
+            "severity": "MEDIUM",
+            "header": "X-XSS-Protection",
+            "description": "XSS filter for older browsers",
+            "recommendation": "Add X-XSS-Protection header to all responses"
+        }
+    ]
+}
