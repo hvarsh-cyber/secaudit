@@ -35,14 +35,18 @@
 ---
 
 ## 🏗️ Architecture
+
+```
 secaudit/
 ├── .github/
 │   └── workflows/
-│       └── security-scan.yml  ← automated pipeline
+│       └── security-scan.yml
 ├── scanner/
-│   └── vulnerability_scanner.py  ← core scanning engine
-├── reports/  ← auto-generated JSON reports
-└── main.py  ← entry point
+│   └── vulnerability_scanner.py
+├── reports/
+└── main.py
+```
+
 ---
 
 ## ⚡ Quick Start
@@ -83,20 +87,17 @@ To use in your own repo, add these GitHub secrets:
 ---
 
 ## 📊 Sample Output
-==================================================
+
+```
 SecAudit — Security Scanner
 Target: https://example.com
-[] Checking HTTPS enforcement
+==================================================
 [✓] HTTPS is enabled
-[] Checking security headers
-[!] MISSING: X-Frame-Options — Prevents clickjacking attacks
-[!] MISSING: Content-Security-Policy — Prevents XSS attacks
-[] Checking cookie security
-[] No cookies found
-[] Creating GitHub Issues for vulnerabilities...
-[✓] GitHub Issue created: https://github.com/hvarsh-cyber/secaudit/issues/1
-[] Total vulnerabilities found: 5
----
+[!] MISSING: X-Frame-Options
+[!] MISSING: Content-Security-Policy
+[✓] GitHub Issue created: #1
+[*] Total vulnerabilities found: 5
+```
 
 ## 🔮 Roadmap
 
