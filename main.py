@@ -1,10 +1,13 @@
+import os
 from scanner.vulnerability_scanner import VulnerabilityScanner
 
 def main():
-    # Target URL to scan
-    target = input("Enter the URL to scan (e.g. https://example.com): ")
+    # Get URL from environment variable or ask user
+    target = os.getenv("TARGET_URL", None)
     
-    # Create scanner and run
+    if not target:
+        target = input("Enter the URL to scan (e.g. https://example.com): ")
+    
     scanner = VulnerabilityScanner(target)
     scanner.run_scan()
 
